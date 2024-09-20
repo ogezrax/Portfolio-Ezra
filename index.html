@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Olá, Eu Sou Esdras Brito</h1>
+        <p>Desenvolvedor Web | Designer | Freelancer</p>
+        <a href="#projects" class="btn">Veja Meus Projetos</a>
+    </section>
+
+    <section id="about">
+        <img src="eu atualizado.png" alt="Eu">
+        <h2> Sobre Mim</h2>
+        <p>Sou um desenvolvedor web com experiência em criar sites modernos, funcionais e visualmente agradáveis. Tenho paixão por tecnologia e adoro transformar ideias em realidade através de código.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>HTML & CSS</h3>
+                <div class="progress-bar"><span style="width: 90%;"></span></div>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <div class="progress-bar"><span style="width: 80%;"></span></div>
+            </div>
+            <div class="skill-item">
+                <h3>React</h3>
+                <div class="progress-bar"><span style="width: 75%;"></span></div>
+            </div>
+            <div class="skill-item">
+                <h3>Design Gráfico</h3>
+                <div class="progress-bar"><span style="width: 85%;"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Meus Projetos</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <a href="projeto1/index.html">
+                    <img src="tela de land page.png" alt="Projeto 1">
+                    <h3>Landing Page</h3>
+                </a>
+                <p>Descrição breve do projeto.</p>
+            </div>
+            <div class="project-item">
+                <a href="projeto2/index.html">
+                    <img src="captura de dados site.jpg" alt="Projeto 2">
+                    <h3>Página de captura de dados</h3>
+                </a>
+                <p>Descrição breve do projeto.</p>
+            </div>
+            <div class="project-item">
+                <a href="projeto3.html">
+                    <img src="magazine-Luiza.jpg" alt="Projeto 3">
+                    <h3>Réplica de site conhecido</h3>
+                </a>
+                <p>Descrição breve do projeto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Esdras Brito. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

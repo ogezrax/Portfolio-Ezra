@@ -1,0 +1,334 @@
+/* Resetando margens e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(to bottom, rgba(0, 191, 166, 1) 0%, rgba(0, 191, 166, 0.6) 60%, rgba(0, 191, 166, 0) 100%);
+    color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+header .logo p {
+    font-size: 1rem;
+    color: #f1f1f1;
+    font-weight: 300;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Seção do Perfil */
+#profile {
+    background: url('AVI_5203.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 80px; /* Ajusta o espaço abaixo do cabeçalho fixo */
+    position: relative;
+}
+
+#profile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Sobreposição escura para melhor legibilidade */
+    z-index: 1;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info h2 {
+    font-size: 2.5rem;
+    color: #00bfa6;
+    margin-bottom: 1rem;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.profile-info .btn {
+    background-color: #00bfa6;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-info .btn:hover {
+    background-color: #008c72;
+    transform: scale(1.05);
+}
+
+/* Seção Hero */
+#hero {
+    background: linear-gradient(135deg, rgba(0, 191, 165, 0.8), rgba(0, 140, 114, 0.8)), url('hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#hero .btn {
+    background-color: #fff;
+    color: #008c72;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#hero .btn:hover {
+    background-color: #00bfa6;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Seção Serviços */
+#services {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00bfa6;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.service-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    color: #008c72;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    color: #666;
+}
+
+/* Seção Depoimentos */
+#testimonials {
+    padding: 4rem 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00bfa6;
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.testimonial-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    flex: 1;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-item h4 {
+    color: #008c72;
+}
+
+/* Seção Contato */
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00bfa6;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#contact button {
+    background-color: #00bfa6;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #008c72;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
